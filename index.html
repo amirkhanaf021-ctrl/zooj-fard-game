@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بازی زوج و فرد</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>🎲 بازی تشخیص زوج و فرد</h1>
+<p class="designer">طراح: امیر افشار</p>
+
+<div id="start">
+<input id="name" placeholder="نام دانش‌آموز" />
+<button onclick="startGame()">شروع بازی</button>
+</div>
+
+<div id="game" style="display:none">
+<div class="number" id="number">0</div>
+<div class="buttons">
+<button onclick="answer('even')">زوج</button>
+<button onclick="answer('odd')">فرد</button>
+</div>
+<p id="progress"></p>
+</div>
+
+<div id="end" style="display:none">
+<h2 id="score"></h2>
+<p>نتیجه برای معلم ارسال شد ✅</p>
+<button onclick="location.reload()">دوباره بازی کن</button>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
