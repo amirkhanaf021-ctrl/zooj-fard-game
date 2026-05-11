@@ -4,8 +4,8 @@ let score=0;
 let name="";
 const total=10;
 
-// آدرس وب‌اپ گوگل اسکریپت را اینجا قرار دهید
-const ENDPOINT="PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE";
+// Google Sheets Web App endpoint
+const ENDPOINT="https://script.google.com/macros/s/AKfycbwvB4XkQEJJIblQtHXuy6TpKamgYJlSU46pNp5nT6Gju1oMpNk-TQPZvpeXs_Q1T_4y0g/exec";
 
 function startGame(){
  name=document.getElementById('name').value.trim();
@@ -37,7 +37,7 @@ function finish(){
 }
 
 function sendResult(){
- if(!ENDPOINT || ENDPOINT.includes('PASTE')) return;
+ if(!ENDPOINT) return;
  fetch(ENDPOINT,{
  method:'POST',
  headers:{'Content-Type':'application/json'},
